@@ -1,14 +1,10 @@
 import "../public/HeaderOnlineStore.css"
 import onlineStore from "../public/logoOnlineStore.png"
 import { AiOutlineMail,AiOutlineShoppingCart } from 'react-icons/ai';
-//import { AiOutlineMail } from 'react-icons/ai';
 
 export default () => {
     return (
         <header className="headerBar">
-
-        <div>
-
 
 
         <div className="onlineStore">
@@ -18,6 +14,8 @@ export default () => {
             <div className="container">
             
             <div className="searchIco">
+
+   
             <input type="text" placeholder="Search.." />
             <div className="icons">
             < AiOutlineMail/>
@@ -44,7 +42,6 @@ export default () => {
             </div>
 
 
-        </div>
 
         </header>
     )

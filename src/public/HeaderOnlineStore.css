@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
 *{
     margin: 0;
     padding: 0;
@@ -67,4 +70,20 @@ justify-content: space-between;
 .categories a :hover::after {
     width: 100%;
     transition: width .3s;
+}
+
+
+ 
+@media(max-width:1366px){
+    .categories a {
+      font-size: 0.84rem;
+    }
+.categories ul{
+    width: 65%;
+}
+
+.icons {
+        font-size:  1.5rem;
+        width: 7%;
+    }
 }
