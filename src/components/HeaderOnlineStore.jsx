@@ -6,7 +6,12 @@ import { AiOutlineMail,AiOutlineShoppingCart } from 'react-icons/ai';
 export default () => {
     return (
         <header className="headerBar">
-            <div className="onlineStore">
+
+        <div>
+
+
+
+        <div className="onlineStore">
            <img src={onlineStore}></img>
             </div>
             
@@ -37,6 +42,10 @@ export default () => {
             
             
             </div>
+
+
+        </div>
+
         </header>
     )
 }
