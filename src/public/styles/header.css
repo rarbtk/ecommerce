@@ -6,7 +6,7 @@ padding: 0;
 
 .Header {
    width: 100%;
- display: flex;
+  display: flex;
   justify-content: center; /* Centers items horizontally */
   align-items: center; /* Centers items vertically */
   }
@@ -67,7 +67,7 @@ a:hover {
   color: #4f4f4f;
 }
 
-  input[type="text"] {
+.searchIco input[type="text"] {
     width: 70%;
     height: 2.3em;
     font-size: 1em;

@@ -1,4 +1,4 @@
-import "../public/HeaderOnlineStore.css"
+import "../public/styles/HeaderOnlineStore.css"
 import onlineStore from "../public/logoOnlineStore.png"
 import { AiOutlineMail,AiOutlineShoppingCart } from 'react-icons/ai';
 

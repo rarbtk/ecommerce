@@ -1,5 +1,5 @@
 import logo from "../public/logoat&t.png";
-import "../public/header.css";
+import "../public/styles/header.css";
 import { BiSearch } from 'react-icons/bi';
 
 export default function Header() {
@@ -15,7 +15,7 @@ export default function Header() {
       <div className="texto">
 
       <div class="input-with-icon">
-    <input type="text" placeholder="Search.." />
+    <input type="search" placeholder="Search.." />
     <a href="" class="icon"> <BiSearch /></a>
   </div>
      
