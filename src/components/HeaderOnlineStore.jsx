@@ -17,6 +17,7 @@ export default () => {
 
    
             <input type="text" placeholder="Search.." />
+            <input type="button" placeholder="Search" value="Search"/>
             <div className="icons">
             < AiOutlineMail/>
             < AiOutlineShoppingCart/>
@@ -29,7 +30,7 @@ export default () => {
 
             <div className="categories">
             <ul>
-            <a><li> Cocción</li></a>  
+            <a><li>Cocción</li></a>  
             <a><li>Climatización</li></a>
             <a><li>Refrigeración</li></a>
             <a><li>Lavado</li></a>

@@ -1,49 +1,41 @@
 import { useState } from 'react';
 import HeaderOnlineStore from './HeaderOnlineStore';
 import '../public/styles/login.css'
-import 'firebase/auth';
+import { useAuth } from '../context/authContext';
+import { db } from '../firebase';
+
+
 
 export default function Login() {
 
-  const [nombre, setNombre] = useState(''); // estados de input nombre
-  const [apellido, setApellido] = useState(''); // estados de input apellido
   const [email, setEmail] = useState(''); 
-  const [contrasena, setContrasena] = useState('');
-  const [contrasena2,setContrasena2] = useState('');
+  const [password, setContrasena] = useState('');
+  const {signUp} = useAuth();
 
 
 
-  const handleSubit = event => {
-    event.preventDefault(); //evita que la pagina se reinicie 
+
+  const handleSubit =async( event) => {
+
+    event.preventDefault(); 
+   /* signUp(email,password);
+
+    const products = await db.collection('products').doc('ciUwrBpUkc7FgV81BqVg').collection('allProducts').get();
+    const allproducts = products.docs.map(ele => ele.data());
+    console.log(allproducts); */
 
   };
 
 
   return (
-    <div> <HeaderOnlineStore />
+    <div> 
+    <HeaderOnlineStore />
 
 
 <form onSubmit={handleSubit} method="" className='LoginContainer'>
         <ul>
           <li>
-            <label for="name">Nombre:</label>
-            <input type="text" id="nombre" name="nombre"
-              onChange={event => setNombre(event.target.value)} //se pone el valor del nombre
-              value={nombre} />
-          </li>
-          <li>
-            <label for="apellido">Apellido:</label>
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              onChange={event => setApellido(event.target.value)}//se pone el valor del apellido
-              value={apellido}
-            />
-
-          </li>
-          <li>
-            <label for="email">Email:</label>
+            <label htmlFor="email">Email:</label>
             <input
               type="email"
               id="email"
@@ -54,18 +46,18 @@ export default function Login() {
 
           </li>
           <li>
-            <label for="contrasena">Contrasena:</label>
+            <label htmlFor="contrasena">Contrasena:</label>
             <input
               type="password"
-              id="contrasena"
-              name="contrasena"
+              id="password"
+              name="password"
               onChange={event => setContrasena(event.target.value)}//se pone el valor del apellido
-              value={contrasena}
+              value={password}
             />
 
           </li>
-          <li class="button">
-          <button class="button-43" role="button">Log-in</button>
+          <li className="button">
+          <button className="button-43" role="button">Log-in</button>
 
           </li>
         </ul>
