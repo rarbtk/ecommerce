@@ -1,13 +1,14 @@
 import { initializeApp } from 'firebase/app';
 import {getAuth} from 'firebase/auth';
+import 'dotenv/config'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD1qW2TVVWPm4c2-VfP3YgECa2NzqmeFSQ",
-  authDomain: "ecommerce-5f399.firebaseapp.com",
-  projectId: "ecommerce-5f399",
-  storageBucket: "ecommerce-5f399.appspot.com",
-  messagingSenderId: "977385165959",
-  appId: "1:977385165959:web:81a5fb85c74dab5bd39422"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUT_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 

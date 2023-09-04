@@ -7,7 +7,6 @@ import Login from "./components/Login.jsx";
 import {BrowserRouter as Router,Routes,Route,Link} from "react-router-dom";
 import { AuthProvider } from "./context/authContext.jsx";
 
-
 export default function App() {
   return (
 <AuthProvider>
