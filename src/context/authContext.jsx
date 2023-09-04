@@ -1,6 +1,9 @@
 import { createContext, useContext } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-//import { auth } from "../firebase";
+import { auth } from "../firebase";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+
+
 export const authContext = createContext();
 
 export const useAuth = () => {
@@ -16,14 +19,44 @@ export function AuthProvider({children}){
  
 
 
-    const signUp = (email, password) => {
+    const signUp = async(email, password,name,lastName) => {
 
-        createUserWithEmailAndPassword(email, password)
+        try{
+            await createUserWithEmailAndPassword(auth,email, password,name,lastName)
 
-    }
+        }catch(err){
+            if(err == `FirebaseError: Firebase: Error (auth/email-already-in-use).`){
+                alert("Email already in use")
+            }else{
+                console.log(err) 
+            }
+        }
 
+    };
+
+    const  signIn = async (auth, email, password) => {
+
+        try {
+            await signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log(user)
+                }).catch((error) => {
+    
+                    if(error.message == 'Firebase: Error (auth/user-not-found).'){
+                        alert("Usuario no encontrado.");
+                    }else if(error.message == 'Firebase: Error (auth/wrong-password).'){
+                        alert("Contraseña o email incorrectos.");
+                    }
+                   
+                });
+    
+            }  catch (error) {
+    
+            }
+        };
 
 return (
-    <authContext.Provider value={{signUp}}>{children}</authContext.Provider>
+    <authContext.Provider value={{signUp, signIn}}>{children}</authContext.Provider>
 )
 }

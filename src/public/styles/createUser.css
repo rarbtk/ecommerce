@@ -13,18 +13,19 @@
     
 }
 
-.LoginContainer{
+
+.signInForm{
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-    top: 50%;
+  width: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
     position: absolute;
-  
+
 }
 ul{
   font-size: 1.3rem;
@@ -57,7 +58,6 @@ ul li input{
 
 
 
-
 /* CSS */
 .button-43 {
   background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
@@ -86,30 +86,9 @@ ul li input{
     padding: 1rem 2rem;
   }
 }
-
-@media (min-height: 1px) {
-  .LoginContainer{
-    position: absolute;
-    top: 300px;
-
-  }
-}
-
 @media (min-height: 915px) {
-  .LoginContainer{
-      top: 35%;
-  }
-}
+    .signInForm{
+        top: 50%;
 
-@media (min-height: 844px) {
-  .LoginContainer{
-      top: 33%;
-
+    }
   }
-}
-
-@media (max-width: 412px) {
-  .LoginContainer {
-    width: 130%;
-  }
-}

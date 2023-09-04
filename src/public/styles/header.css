@@ -20,7 +20,7 @@ img{
 .logo{
   flex-grow: 0;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .texto{

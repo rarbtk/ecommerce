@@ -1,6 +1,5 @@
-const {initializeApp} = require("firebase-admin/app");
-const {getAuth} = require ('firebase/auth');
-const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
+import { initializeApp } from 'firebase/app';
+import {getAuth} from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyD1qW2TVVWPm4c2-VfP3YgECa2NzqmeFSQ",
@@ -14,6 +13,5 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)
-export const db = getFirestore(app);
 
 
