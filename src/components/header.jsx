@@ -17,7 +17,7 @@ export default function Header() {
       <div class="input-with-icon">
     <input type="search" placeholder="Search.." />
     <a href="" class="icon"> <BiSearch /></a>
-  </div>
+    </div>
 
       <ul>
       <a href="">Inicio</a>
